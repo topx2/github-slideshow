@@ -1,0 +1,6 @@
+
+#!/bin/sh
+
+# Check out the files
+git --work-tree=/var/www/deployed_project --git-dir=/home/ubuntu/bare_project.git checkout -f
+
