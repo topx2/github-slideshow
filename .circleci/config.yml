@@ -8,16 +8,16 @@ orbs:
 jobs:
   print_hello:
     docker:
-      - image: circleci/node:13.8.0
+      - image: circleci/chakracore-10.0.0
     steps:
       - run: echo hello We Will Upgrade
   print_world:
     docker:
-      - image: circleci/node:13.8.0
+      - image: circleci/chakracore-10.0.0
     steps:
-      - run: sudo apt list --upgradable
-      - run: sudo apt update -y
-      - run: sudo apt upgrade -y
+      - run: sudo yum  list --upgradable
+      - run: sudo yum update -y
+      - run: sudo yum upgrade -y
 
 workflows:
   # Name the workflow "welcome"
