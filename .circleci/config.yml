@@ -16,7 +16,8 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - run: sudo apt list --upgradable
- 
+      - run: sudo apt update -y
+      - run: sudo apt upgrade -y
 
 workflows:
   # Name the workflow "welcome"
