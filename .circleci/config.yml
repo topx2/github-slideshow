@@ -10,12 +10,14 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - run: echo hello
+      - run: echo hello We Will Upgrade
   print_world:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - run: sudo apt update -y
+      - run: sudo apt list --upgradable
+ 
+
 workflows:
   # Name the workflow "welcome"
   welcome:
